@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-background-color 0xdfdfdfff?>
+
+<AnchorPane id="AnchorPane" prefHeight="364.0" prefWidth="372.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Button layoutX="277.0" layoutY="324.0" mnemonicParsing="false" onAction="#onEnterClicked" prefHeight="26.0" prefWidth="77.0" text="Enter" />
+    <AnchorPane layoutX="28.0" layoutY="30.0" mouseTransparent="false" prefHeight="138.0" prefWidth="311.0">
+      <children>
+        <AnchorPane layoutX="14.0" layoutY="27.0" prefHeight="83.99990844726562" prefWidth="179.0">
+          <children>
+            <TextField layoutX="7.0" layoutY="12.0" prefWidth="86.0" />
+            <TextField layoutX="93.0" layoutY="12.0" prefWidth="86.0" />
+            <TextField layoutX="7.0" layoutY="32.0" prefWidth="86.0" />
+            <TextField layoutX="93.0" layoutY="32.0" prefWidth="86.0" />
+            <TextField layoutX="7.0" layoutY="52.0" prefWidth="86.0" />
+            <TextField layoutX="93.0" layoutY="52.0" prefWidth="86.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane disable="false" layoutX="204.0" layoutY="5.0" minHeight="112.0" prefHeight="128.0" prefWidth="93.0">
+          <children>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/133.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/134.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="38.999900000002526" fitWidth="38.999900000002526" layoutX="8.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/471.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/136.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/135.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="47.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/470.png" />
+              </image>
+            </ImageView>
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+    <AnchorPane layoutX="28.0" layoutY="174.0" prefHeight="138.0" prefWidth="311.0">
+      <children>
+        <AnchorPane layoutX="14.0" layoutY="27.0" prefHeight="83.99990844726562" prefWidth="179.0">
+          <children>
+            <TextField layoutX="7.0" layoutY="12.0" prefWidth="86.0" />
+            <TextField layoutX="93.0" layoutY="12.0" prefWidth="86.0" />
+            <TextField layoutX="7.0" layoutY="32.0" prefWidth="86.0" />
+            <TextField layoutX="93.0" layoutY="32.0" prefWidth="86.0" />
+            <TextField layoutX="7.0" layoutY="52.0" prefWidth="86.0" />
+            <TextField layoutX="93.0" layoutY="52.0" prefWidth="86.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane layoutX="205.0" layoutY="5.0" minHeight="112.0" prefHeight="128.0" prefWidth="93.0">
+          <children>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/157.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/160.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.00000081786857" fitWidth="39.00000081786857" layoutX="8.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/154.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/392.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/395.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="47.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/389.png" />
+              </image>
+            </ImageView>
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+    <MenuBar layoutX="0.0" layoutY="2.0" prefWidth="372.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="ファイル">
+          <items>
+            <MenuItem mnemonicParsing="false" text="閉じる" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="編集">
+          <items>
+            <MenuItem mnemonicParsing="false" text="削除" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="ヘルプ">
+          <items>
+            <MenuItem mnemonicParsing="false" text="バージョン情報" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</AnchorPane>
