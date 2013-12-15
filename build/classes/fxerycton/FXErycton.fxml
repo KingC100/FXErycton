@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.*?>
 <?scenebuilder-background-color 0xdfdfdfff?>
 
-<AnchorPane id="AnchorPane" prefHeight="364.0" prefWidth="372.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" prefHeight="364.0" prefWidth="372.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxerycton.FXEryctonController">
   <children>
-    <Button layoutX="277.0" layoutY="324.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="77.0" text="Enter" />
+    <Button id="FXEryctonController" layoutX="277.0" layoutY="324.0" mnemonicParsing="false" onAction="#OnAction" prefHeight="26.0" prefWidth="77.0" text="Enter" />
     <AnchorPane layoutX="28.0" layoutY="30.0" mouseTransparent="false" prefHeight="138.0" prefWidth="311.0">
       <children>
         <AnchorPane layoutX="14.0" layoutY="27.0" prefHeight="83.99990844726562" prefWidth="179.0">
@@ -109,14 +109,14 @@
     </AnchorPane>
     <MenuBar layoutX="0.0" layoutY="2.0" prefWidth="372.0">
       <menus>
-        <Menu mnemonicParsing="false" text="ファイル">
+        <Menu mnemonicParsing="false" text="メニュー">
           <items>
-            <MenuItem mnemonicParsing="false" text="閉じる" />
+            <MenuItem mnemonicParsing="false" text="対戦種別" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="編集">
           <items>
-            <MenuItem mnemonicParsing="false" text="削除" />
+            <MenuItem mnemonicParsing="false" text="全てクリア" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="ヘルプ">
