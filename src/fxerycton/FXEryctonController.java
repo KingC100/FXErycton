@@ -89,7 +89,8 @@ public class FXEryctonController implements Initializable {
     
     @FXML
     private void OnAction(ActionEvent event) {
-        
+        String moyashi = txb_Own_1.getText();
+        System.out.println(moyashi);
         System.out.println("ほっちゃーん! ほ、ほーっ、ホアアーッ!! ホアーッ!!");
     }
     
