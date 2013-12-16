@@ -6,15 +6,13 @@
 
 package fxerycton;
 
-import java.io.*;
-import java.net.MalformedURLException;
+
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -91,12 +89,15 @@ public class FXEryctonController implements Initializable {
     @FXML RadioButton rdb_Result_Lose;
     @FXML RadioButton rdb_Result_Cut;
     
+    // Button.
+    @FXML Button btn_Enter;
     
     /* test. */
     @FXML
     private void OnAction(ActionEvent event) {
-            Image img = new Image("C:\\Users\\kiichi\\Documents\\NetBeansProjects\\FXErycton\\src\\fxerycton\\img\\133.png");
-            img_Own_1.setImage(img);
+        // OKボタンがクリックされた時の動作
+        String result = txb_Own_1.getText() + "さん、こんにちは。";
+        txb_Own_2.setText(result);
     }
     
     @Override

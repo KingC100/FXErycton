@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.*?>
 <?scenebuilder-background-color 0xf69031f2?>
 
-<AnchorPane id="AnchorPane" prefHeight="432.0000999999975" prefWidth="581.0" style="-fx-background: #f4f4f4;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxerycton.FXEryctonController">
+<AnchorPane id="AnchorPane" prefHeight="432.0000999999975" prefWidth="581.0" style="" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxerycton.FXEryctonController">
   <children>
     <AnchorPane id="" layoutX="14.0" layoutY="30.0" mouseTransparent="false" prefHeight="138.0" prefWidth="325.0">
       <children>
@@ -65,7 +65,7 @@
           </stroke>
         </Line>
         <Line endX="0.0" endY="500.0" layoutX="315.0" layoutY="-111.0" startX="0.0" startY="110.0" stroke="$x1" />
-        <Button id="FXEryctonController" layoutX="465.0" layoutY="345.0" mnemonicParsing="false" onAction="#OnAction" prefHeight="31.0" prefWidth="87.0" text="Enter" />
+        <Button id="FXEryctonController" layoutX="465.0" layoutY="345.0" mnemonicParsing="false" onAction="#OnAction" onMouseClicked="#OnAction" prefHeight="31.0" prefWidth="87.0" text="Enter" />
       </children>
     </AnchorPane>
     <AnchorPane layoutX="14.0" layoutY="168.0" prefHeight="144.0" prefWidth="325.0">
