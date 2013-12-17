@@ -18,8 +18,10 @@ import javafx.stage.Stage;
  */
 public class FXErycton extends Application {
     
+    @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXErycton.fxml"));
+        root.setStyle("-fx-background-color: #F0591E;");
         
         Scene scene = new Scene(root);
         

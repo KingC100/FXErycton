@@ -7,6 +7,7 @@
 package fxerycton;
 
 
+import fxerycton.Export.ExportResult;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -92,13 +93,25 @@ public class FXEryctonController implements Initializable {
     // Button.
     @FXML Button btn_Enter;
     
-    /* test. */
+    
+    // Enter Entered
     @FXML
-    private void OnAction(ActionEvent event) {
-        // OKボタンがクリックされた時の動作
-        String result = txb_Own_1.getText() + "さん、こんにちは。";
-        txb_Own_2.setText(result);
+    public void OnEntered(ActionEvent event){
+        System.out.println("おんえんたーど");
+        ExportResult exportResult = new ExportResult();
+        exportResult.ResultExport();
+        
     }
+    
+    /* test. */
+//    @FXML
+//    public void OnAction(ActionEvent event) {
+//        // OKボタンがクリックされた時の動作
+//        String result = txb_Own_1.getText() + "さん、こんにちは。";
+//        txb_Own_2.setText(result);
+//        Image img = new Image("C:\\Users\\kiichi\\Documents\\NetBeansProjects\\FXErycton\\dist\\160.png");
+//        img_Own_1.setImage(img);
+//    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
