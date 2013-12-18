@@ -7,17 +7,13 @@
 package fxerycton;
 
 
-import fxerycton.Export.ExportResult;
+import fxerycton.AppUtil.LovelyMyAngelAyase;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 /**
@@ -27,8 +23,14 @@ import javafx.scene.image.ImageView;
 public class FXEryctonController implements Initializable {
     
     /**
-     * Control-ID.
+     * Containers-ID.
      */
+    
+    // MenuBar.
+    @FXML MenuBar menuBar;
+    
+    // ContextMenu
+    @FXML MenuItem Ayase;
     
     // Label.
     @FXML Label lbl_Own;    
@@ -94,24 +96,26 @@ public class FXEryctonController implements Initializable {
     @FXML Button btn_Enter;
     
     
-    // Enter Entered
     @FXML
     public void OnEntered(ActionEvent event){
-        System.out.println("おんえんたーど");
-        ExportResult exportResult = new ExportResult();
-        exportResult.ResultExport();
+        
+        /***
+         * EnterProcess実行
+         */
         
     }
     
-    /* test. */
-//    @FXML
-//    public void OnAction(ActionEvent event) {
-//        // OKボタンがクリックされた時の動作
-//        String result = txb_Own_1.getText() + "さん、こんにちは。";
-//        txb_Own_2.setText(result);
-//        Image img = new Image("C:\\Users\\kiichi\\Documents\\NetBeansProjects\\FXErycton\\dist\\160.png");
-//        img_Own_1.setImage(img);
-//    }
+    @FXML
+    public void Ayase(ActionEvent event){
+        
+           /**
+            * ayase
+            */
+           LovelyMyAngelAyase ayase = new LovelyMyAngelAyase();
+           ayase.HayamiSaori();
+        
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

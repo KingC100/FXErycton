@@ -12,4 +12,17 @@ package fxerycton.Operation;
  */
 public class EnterProcess {
     
+    /**
+     * 画面項目取得
+     */
+    
+    /**
+     * チェック
+     */
+    
+     /**
+     * 出力
+     */
+
+    
 }

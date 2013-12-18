@@ -17,7 +17,7 @@ import java.io.OutputStreamWriter;
  */
 public class ExportResult {
     
-    public boolean ResultExport() {
+    public boolean ResultExport(String res) {
         String file_Name;
         String dir_Path = ".\\"; 
         
@@ -29,7 +29,7 @@ public class ExportResult {
             
             file.createNewFile();
             
-            osw.write("ドーモ、トレーナー=サン。");
+            osw.write(res);
             
             osw.close();
             

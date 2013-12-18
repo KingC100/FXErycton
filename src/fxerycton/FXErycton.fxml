@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
-<?scenebuilder-background-color 0xf69031f2?>
+<?scenebuilder-background-color 0xffb199ff?>
 
 <AnchorPane id="" prefHeight="432.0000999999975" prefWidth="581.0" style="" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxerycton.FXEryctonController">
   <children>
@@ -117,15 +117,17 @@
         <Label fx:id="lbl_Rival" layoutX="21.0" layoutY="10.0" text="Rival :" />
       </children>
     </AnchorPane>
-    <MenuBar disable="false" focusTraversable="false" layoutX="0.0" layoutY="0.0" prefWidth="581.0" visible="true">
+    <MenuBar fx:id="menuBar" disable="false" focusTraversable="false" layoutX="-1.0" layoutY="0.0" prefWidth="581.0" useSystemMenuBar="true" visible="true">
       <menus>
         <Menu mnemonicParsing="false" text="メニュー">
           <items>
-            <MenuItem mnemonicParsing="false" text="対戦種別" />
+            <MenuItem mnemonicParsing="false" onAction="#Ayase" text="あやせだよっ" fx:id="Ayase" />
+            <MenuItem mnemonicParsing="false" text="終了" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="編集">
           <items>
+            <MenuItem mnemonicParsing="false" text="対戦種別" />
             <MenuItem mnemonicParsing="false" text="全てクリア" />
           </items>
         </Menu>
@@ -229,7 +231,7 @@
         </AnchorPane>
       </children>
     </AnchorPane>
-    <Label id="lbl_RateRecord" fx:id="lbl_MessageArea" alignment="TOP_LEFT" layoutX="338.0" layoutY="323.0" prefHeight="91.0" prefWidth="118.0" text="ErrorMessage :" />
+    <Label id="lbl_RateRecord" fx:id="lbl_MessageArea" alignment="TOP_LEFT" layoutX="338.0" layoutY="321.0" prefHeight="91.0" prefWidth="118.0" text="ErrorMessage :" textAlignment="LEFT" wrapText="true" />
     <Line endX="450.0" fill="BLACK" layoutX="116.0" layoutY="313.0" startX="-100.0" stroke="$x1" strokeWidth="1.5" />
   </children>
 </AnchorPane>
