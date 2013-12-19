@@ -121,19 +121,25 @@
       <menus>
         <Menu mnemonicParsing="false" text="メニュー">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#Ayase" text="あやせだよっ" fx:id="Ayase" />
-            <MenuItem mnemonicParsing="false" text="終了" />
+            <MenuItem mnemonicParsing="false" onAction="#Ayase" text="新垣あやせ" fx:id="mei_Ayase" />
+            <MenuItem mnemonicParsing="false" onAction="#FormClear" text="全てクリア" fx:id="mei_AllClear" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#FormExit" text="終了" fx:id="mei_Exit" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="編集">
+        <Menu mnemonicParsing="false" text="対戦種別" fx:id="men_BattleType">
           <items>
-            <MenuItem mnemonicParsing="false" text="対戦種別" />
-            <MenuItem mnemonicParsing="false" text="全てクリア" />
+            <RadioMenuItem mnemonicParsing="false" onAction="#SelectedToSingleBattle" selected="true" text="シングル" fx:id="rmi_Single">
+              <toggleGroup>
+                <ToggleGroup fx:id="BattleType" />
+              </toggleGroup>
+            </RadioMenuItem>
+            <RadioMenuItem mnemonicParsing="false" onAction="#SelectedToDoubleBattle" selected="false" text="ダブル" toggleGroup="$BattleType" fx:id="rmi_Double" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="ヘルプ">
+        <Menu mnemonicParsing="false" text="ヘルプ" fx:id="men_Help">
           <items>
-            <MenuItem mnemonicParsing="false" text="バージョン情報" />
+            <MenuItem mnemonicParsing="false" text="バージョン情報" fx:id="mei_VersionInfo" />
           </items>
         </Menu>
       </menus>
@@ -165,7 +171,7 @@
             <TextField id="Friend_1" fx:id="txb_Elect_Own_1" layoutX="4.0" layoutY="6.0" prefWidth="86.0" />
             <TextField fx:id="txb_Elect_Own_3" layoutX="4.0" layoutY="46.0" prefWidth="86.0" />
             <TextField fx:id="txb_Elect_Own_2" layoutX="4.0" layoutY="26.0" prefWidth="86.0" />
-            <TextField fx:id="txb_Elect_Own_4" layoutX="4.0" layoutY="65.0" prefWidth="86.0" />
+            <TextField fx:id="txb_Elect_Own_4" disable="true" layoutX="4.0" layoutY="66.0" prefWidth="86.0" />
           </children>
         </AnchorPane>
         <AnchorPane disable="false" layoutX="108.0" layoutY="24.0" minHeight="84.0" prefHeight="90.99990000000253" prefWidth="93.0">
@@ -202,7 +208,7 @@
             <TextField id="Friend_1" fx:id="txb_Elect_Rival_1" layoutX="4.0" layoutY="6.0" prefWidth="86.0" />
             <TextField fx:id="txb_Elect_Rival_3" layoutX="4.0" layoutY="46.0" prefWidth="86.0" />
             <TextField fx:id="txb_Elect_Rival_2" layoutX="4.0" layoutY="26.0" prefWidth="86.0" />
-            <TextField fx:id="txb_Elect_Rival_4" layoutX="4.0" layoutY="65.0" prefWidth="86.0" />
+            <TextField fx:id="txb_Elect_Rival_4" disable="true" layoutX="4.0" layoutY="65.0" prefWidth="86.0" />
           </children>
         </AnchorPane>
         <AnchorPane disable="false" layoutX="108.0" layoutY="24.0" minHeight="84.0" prefHeight="90.99990000000253" prefWidth="93.0">

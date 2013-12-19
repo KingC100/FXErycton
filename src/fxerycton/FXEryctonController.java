@@ -8,8 +8,10 @@ package fxerycton;
 
 
 import fxerycton.AppUtil.LovelyMyAngelAyase;
+import fxerycton.Bean.RoofBean;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,12 +28,18 @@ public class FXEryctonController implements Initializable {
      * Containers-ID.
      */
     
-    // MenuBar.
+    // Menu.
     @FXML MenuBar menuBar;
-    
-    // ContextMenu
-    @FXML MenuItem Ayase;
-    
+    @FXML Menu men_Menu;
+    @FXML MenuItem mei_Ayase;
+    @FXML MenuItem mei_AllClear;
+    @FXML MenuItem mei_Exit;
+    @FXML Menu men_BattleType;
+    @FXML RadioMenuItem rmi_Single;
+    @FXML RadioMenuItem rmi_Double;
+    @FXML Menu men_Help;
+    @FXML MenuItem mei_VersionInfo;
+        
     // Label.
     @FXML Label lbl_Own;    
     @FXML Label lbl_Rival;
@@ -85,7 +93,7 @@ public class FXEryctonController implements Initializable {
     @FXML ImageView img_Elect_Rival_1;
     @FXML ImageView img_Elect_Rival_2;
     @FXML ImageView img_Elect_Rival_3;
-    @FXML ImageView img_Elect_Rival_4;
+    @FXML ImageView img_Elect_Rival_4;  
    
     // RadioButton.
     @FXML RadioButton rdb_Result_Win;
@@ -95,6 +103,7 @@ public class FXEryctonController implements Initializable {
     // Button.
     @FXML Button btn_Enter;
     
+    RoofBean rb = new RoofBean();
     
     @FXML
     public void OnEntered(ActionEvent event){
@@ -116,6 +125,41 @@ public class FXEryctonController implements Initializable {
         
     }
     
+    @FXML
+    public void SelectedToSingleBattle(ActionEvent event){
+
+            txb_Elect_Own_4.setDisable(true);
+            txb_Elect_Rival_4.setDisable(true);
+            
+            rb.setBattleType(1);
+        
+    }
+    
+    @FXML
+    public void SelectedToDoubleBattle(ActionEvent event){
+
+            txb_Elect_Own_4.setDisable(false);
+            txb_Elect_Rival_4.setDisable(false);
+            
+            rb.setBattleType(2);
+
+    }
+    
+    @FXML
+    public void FormClear(ActionEvent event){
+        
+        /**
+         *  初期化処理書きたい。
+         */
+        
+    }
+    
+    @FXML
+    public void FormExit(ActionEvent event){
+        
+                        Platform.exit();
+        
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
