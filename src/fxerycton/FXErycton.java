@@ -6,6 +6,7 @@
 
 package fxerycton;
 
+import fxerycton.Bean.RoofBean;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,7 +22,7 @@ public class FXErycton extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXErycton.fxml"));
-        root.setStyle("-fx-background-color: #F0591E;");
+        root.setStyle("-fx-background-color: #E9967A;");
         
         Scene scene = new Scene(root);
         
@@ -29,6 +30,7 @@ public class FXErycton extends Application {
         
         stage.setScene(scene);
         stage.show();
+        RoofBean.setBattleType("single");
     }
 
     /**
