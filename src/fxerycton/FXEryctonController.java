@@ -11,6 +11,7 @@ import fxerycton.AppUtil.LovelyMyAngelAyase;
 import fxerycton.AppUtil.Utility;
 import fxerycton.Bean.RoofBean;
 import fxerycton.Export.ExportResult;
+import fxerycton.Import.GetNumber;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
@@ -140,22 +141,13 @@ public class FXEryctonController implements Initializable {
         RoofBean.setElect_rival_4(txb_Elect_Rival_4.getText());
         RoofBean.setRateRecord(txb_Rival_RateRecord.getText());
         RoofBean.setRivalName(txb_Rival_Name.getText());
+//        String moyashi = rdb_Result_Win.getText(); ok.
 
 
         er.ResultExport(rb);
         
     }
-    
-    // 対戦種別判別.
-    protected boolean default_BattleType(String bt){
-        if (bt == null){
-            return true;
-        }
-        return false;
-    }
-    
-    
-    
+
     @FXML
     public void Ayase(ActionEvent event){
         
@@ -173,7 +165,7 @@ public class FXEryctonController implements Initializable {
             txb_Elect_Own_4.setDisable(true);
             txb_Elect_Rival_4.setDisable(true);
             
-            rb.setBattleType("single");
+            RoofBean.setBattleType("single");
         
     }
     
@@ -183,7 +175,7 @@ public class FXEryctonController implements Initializable {
             txb_Elect_Own_4.setDisable(false);
             txb_Elect_Rival_4.setDisable(false);
             
-            rb.setBattleType("double");
+            RoofBean.setBattleType("double");
 
     }
     
@@ -191,11 +183,14 @@ public class FXEryctonController implements Initializable {
     public void FormClear(ActionEvent event){
         
         /**
-         *  初期化処理書きたい。
+         *  画面初期化処理書きたい。
          */
         
     }
     
+    /***
+     * テスト用文字入力イベント
+     */
     @FXML
     public void ounoun (ActionEvent event){
         txb_Own_1.setText("Own_1");
@@ -222,6 +217,17 @@ public class FXEryctonController implements Initializable {
 	txb_Rival_RateRecord.setText("rate.");
     }
     
+    /***
+     * 
+     */
+    @FXML
+    public void gen(ActionEvent event){
+        GetNumber.ReadXml("a");
+    }
+    
+    /**
+     * アプリケーション終了 
+     */
     @FXML
     public void FormExit(ActionEvent event){
         

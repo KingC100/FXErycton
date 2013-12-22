@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import fxerycton.AppUtil.Utility;
+import fxercton.AppUtil.Const;
 import fxerycton.Bean.RoofBean;
 
 /**
@@ -20,8 +21,6 @@ import fxerycton.Bean.RoofBean;
 public class ExportResult {
     
     public boolean ResultExport(RoofBean rb) {
-        String file_Name;
-        String dir_Path = ".\\"; 
         
         try{
             Utility utl = new Utility();
@@ -32,13 +31,13 @@ public class ExportResult {
                     └─single
             */
             
-            
-            String export_Path = ".\\export\\";
+
+            String export_Path = "." + Const.fs + "export" + Const.fs;
             String[] ymd = utl.getDate();
             String fileName = "result.txt";
             String battle_Type = "single";
-            File dir = new File(export_Path + ymd[0] + ymd[1] + ymd[2] + "\\" + battle_Type + "\\");
-            File file = new File(dir + "\\" + fileName);
+            File dir = new File(export_Path + ymd[0] + ymd[1] + ymd[2] + Const.fs + battle_Type + Const.fs);
+            File file = new File(dir + Const.fs + fileName);
             
             if (!(dir.exists())){
                 dir.mkdirs();   
@@ -47,16 +46,13 @@ public class ExportResult {
             file.createNewFile();
             
             FileOutputStream fos = new FileOutputStream(file,true);
-            OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8"); // UTF-8.
-            
-            file.createNewFile();
-            osw.write(Create_Sentence());
-            
-            osw.close();
+            try (OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8")) {
+                file.createNewFile();
+                osw.write(Create_Sentence());
+            }
         
             return true;
         }catch(IOException e){
-            e.printStackTrace();
             return false;
         }
     }
@@ -69,7 +65,7 @@ public class ExportResult {
 	 */
 	public String Create_Sentence(){
                 Utility utl = new Utility();
-		String str = null;
+		String str = new String();
 		StringBuilder sb = new StringBuilder();
                 String sps = " ";
 		// 入力データの書き込み.
@@ -77,7 +73,6 @@ public class ExportResult {
 		sb.append( sps );
 		sb.append(RoofBean.getRateRecord());
 		sb.append( sps );
-
 		sb.append(RoofBean.getRival_1());
 		sb.append( sps );
 		sb.append(RoofBean.getRival_2());
@@ -90,29 +85,26 @@ public class ExportResult {
 		sb.append( sps );
 		sb.append(RoofBean.getRival_6());
 		sb.append( sps );
-
 		sb.append(RoofBean.getElect_own_1());
 		sb.append( sps );
 		sb.append(RoofBean.getElect_own_2());
 		sb.append( sps );
 		sb.append(RoofBean.getElect_own_3());
 		sb.append( sps );
-		
 		sb.append(RoofBean.getElect_own_4());
 		sb.append( sps );
-		
 		sb.append(RoofBean.getElect_rival_1());
 		sb.append( sps );
 		sb.append(RoofBean.getElect_rival_2());
 		sb.append( sps );
 		sb.append(RoofBean.getElect_rival_3());
 		sb.append( sps );
-
 		sb.append(RoofBean.getElect_rival_4());
 		sb.append( sps );
 
                 String dt[] = utl.getDate();
-		sb.append(dt[0]).append(dt[1]).append(dt[2]);
+		sb.append(dt[0]).append("/").append(dt[1]).append("/").append(dt[2]).append("_").append(dt[3]).append(":").append(dt[4]).append(":").append(dt[5]);
+                sb.append("\n");
 
 		// 区切り線(-----)
 

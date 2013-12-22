@@ -6,7 +6,6 @@
 
 package fxerycton.AppUtil;
 
-import fxerycton.Bean.RoofBean;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -43,7 +42,7 @@ public class Utility {
                 // 現在時刻でDateオブジェクト作成.
                 Date now = new Date(System.currentTimeMillis());
                 // 年/月/日/時/分/秒/曜日のフォーマット作成.
-                SimpleDateFormat sdf_now = new SimpleDateFormat("yyyy/MM/dd");
+                SimpleDateFormat sdf_now = new SimpleDateFormat("yyyy/MM/dd/hh/mm/ss");
                 // Date → フォーマットに嵌める → toString() → "/"でsplitして格納. 
                 String[] str_now = ((sdf_now.format(now)).toString().split("/"));
             
