@@ -34,22 +34,22 @@
               <children>
                 <ImageView fx:id="img_Elect_Own_1" fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/133.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Elect_Own_2" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/134.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Elect_Own_3" fitHeight="38.999900000002526" fitWidth="38.999900000002526" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/471.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Elect_Own_4" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/136.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
               </children>
@@ -72,32 +72,32 @@
               <children>
                 <ImageView fx:id="img_Rival_1" fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/157.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Rival_2" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/160.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Rival_3" fitHeight="39.00000081786857" fitWidth="39.00000081786857" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/154.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Rival_4" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/392.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Rival_5" fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/395.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Rival_6" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/389.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
               </children>
@@ -115,7 +115,7 @@
           <children>
             <AnchorPane layoutX="0.0" layoutY="14.0" prefHeight="83.99990844726562" prefWidth="179.0">
               <children>
-                <TextField id="Friend_1" fx:id="txb_Own_1" layoutX="7.0" layoutY="12.0" prefWidth="86.0" />
+                <TextField id="txb_Own_2" fx:id="txb_Own_1" layoutX="7.0" layoutY="12.0" prefWidth="86.0" />
                 <TextField fx:id="txb_Own_2" layoutX="93.0" layoutY="12.0" prefWidth="86.0" />
                 <TextField fx:id="txb_Own_3" layoutX="7.0" layoutY="32.0" prefWidth="86.0" />
                 <TextField fx:id="txb_Own_4" layoutX="93.0" layoutY="32.0" prefWidth="86.0" />
@@ -128,32 +128,32 @@
               <children>
                 <ImageView fx:id="img_Own_1" fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/133.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Own_2" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/134.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Own_3" fitHeight="38.999900000002526" fitWidth="38.999900000002526" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/471.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Own_4" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/136.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Own_5" fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/135.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
                 <ImageView fx:id="img_Own_6" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/470.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
               </children>
@@ -183,24 +183,24 @@
             </AnchorPane>
             <AnchorPane disable="false" layoutX="108.0" layoutY="32.0" minHeight="84.0" prefHeight="90.99990000000253" prefWidth="93.0">
               <children>
-                <ImageView fx:id="img_Elect_Rival_1" fitHeight="39.0" fitWidth="52.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="img_Elect_Rival_1" fitHeight="39.00001525878906" fitWidth="39.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/154.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
-                <ImageView fx:id="img_Elect_Rival_2" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="img_Elect_Rival_2" fitHeight="39.0" fitWidth="39.0" layoutX="47.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/160.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
-                <ImageView fx:id="img_Elect_Rival_3" fitHeight="38.999900000002526" fitWidth="38.999900000002526" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="img_Elect_Rival_3" fitHeight="38.999900000002526" fitWidth="39.0" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/157.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
-                <ImageView fx:id="img_Elect_Rival_4" fitHeight="39.0" fitWidth="52.0" layoutX="45.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="img_Elect_Rival_4" fitHeight="38.999908447265625" fitWidth="39.0" layoutX="47.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@img/389.png" />
+                    <Image url="@Icons/0.png" />
                   </image>
                 </ImageView>
               </children>
@@ -214,7 +214,6 @@
         <Menu mnemonicParsing="false" text="メニュー">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#Ayase" text="新垣あやせ" fx:id="mei_Ayase" />
-            <MenuItem mnemonicParsing="false" onAction="#FormClear" text="全てクリア" fx:id="mei_AllClear" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" onAction="#FormExit" text="終了" fx:id="mei_Exit" />
           </items>
@@ -232,8 +231,8 @@
         <Menu mnemonicParsing="false" text="ヘルプ" fx:id="men_Help">
           <items>
             <MenuItem mnemonicParsing="false" text="バージョン情報" fx:id="mei_VersionInfo" />
-            <MenuItem mnemonicParsing="false" onAction="#gen" text="readxml" />
             <MenuItem mnemonicParsing="false" onAction="#ounoun" text="inputtext" />
+            <MenuItem mnemonicParsing="false" onAction="#ImageRefresh" text="imgrefresh" />
           </items>
         </Menu>
       </menus>

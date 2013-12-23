@@ -11,18 +11,20 @@ import fxerycton.AppUtil.LovelyMyAngelAyase;
 import fxerycton.AppUtil.Utility;
 import fxerycton.Bean.RoofBean;
 import fxerycton.Export.ExportResult;
-import fxerycton.Import.GetNumber;
+import fxerycton.Import.ReadContents;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 /**
- *
  * @author kiichi
  */
 public class FXEryctonController implements Initializable {
@@ -99,6 +101,8 @@ public class FXEryctonController implements Initializable {
     @FXML ImageView img_Elect_Rival_4;  
    
     // RadioButton.
+    @FXML ToggleGroup result;
+    @FXML Group test;
     @FXML RadioButton rdb_Result_Win;
     @FXML RadioButton rdb_Result_Lose;
     @FXML RadioButton rdb_Result_Cut;
@@ -108,18 +112,33 @@ public class FXEryctonController implements Initializable {
     
     RoofBean rb = new RoofBean();
     
+    /***
+     * 登録処理
+     * @param event 
+     */
     @FXML
     public void OnEntered(ActionEvent event){
         
-        /***
-         * EnterProcess実行
-         */
-        
         Utility utl = new Utility();
-        
         ExportResult er = new ExportResult();
+	
+	// 画面項目をRoofBeanに投げる
+	ThrowResult();
+	
+	//画面項目リセット
+	ResetForm();
+	
+	// 出力
+	er.ResultExport(rb);
         
-        RoofBean.setOwn_1(txb_Own_1.getText());
+    }
+    
+    /***
+     *  画面項目をRoofBeanに投げる
+     */
+    @FXML
+    protected void ThrowResult(){
+	RoofBean.setOwn_1(txb_Own_1.getText());
         RoofBean.setOwn_2(txb_Own_2.getText());
         RoofBean.setOwn_3(txb_Own_3.getText());
         RoofBean.setOwn_4(txb_Own_4.getText());
@@ -141,26 +160,89 @@ public class FXEryctonController implements Initializable {
         RoofBean.setElect_rival_4(txb_Elect_Rival_4.getText());
         RoofBean.setRateRecord(txb_Rival_RateRecord.getText());
         RoofBean.setRivalName(txb_Rival_Name.getText());
-//        String moyashi = rdb_Result_Win.getText(); ok.
-
-
-        er.ResultExport(rb);
+        RoofBean.setResult(getSelected());
+    }
         
+    
+    /***
+     * 画面項目リセット
+     */
+    @FXML 
+    protected void ResetForm(){
+	// 自分見せ合い除いて画面項目をリセットする
+	txb_Rival_1.setText("");
+	txb_Rival_2.setText("");
+	txb_Rival_3.setText("");
+	txb_Rival_4.setText("");
+	txb_Rival_5.setText("");
+	txb_Rival_6.setText("");
+	txb_Elect_Own_1.setText("");
+	txb_Elect_Own_2.setText("");
+	txb_Elect_Own_3.setText("");
+	txb_Elect_Own_4.setText("");
+	txb_Elect_Rival_1.setText("");
+	txb_Elect_Rival_2.setText("");
+	txb_Elect_Rival_3.setText("");
+	txb_Elect_Rival_4.setText("");
+	txb_Rival_Name.setText("");
+	txb_Rival_RateRecord.setText("");
+	
+	ReadContents rc = new ReadContents();
+	Image emp = new Image((getClass().getResource(rc.GetPath("Empty"))).toString());
+	img_Rival_1.setImage(emp);
+	img_Rival_2.setImage(emp);
+	img_Rival_3.setImage(emp);
+	img_Rival_4.setImage(emp);
+	img_Rival_5.setImage(emp);
+	img_Rival_6.setImage(emp);
+	img_Elect_Own_1.setImage(emp);
+	img_Elect_Own_2.setImage(emp);
+	img_Elect_Own_3.setImage(emp);
+	img_Elect_Own_4.setImage(emp);
+	img_Elect_Rival_1.setImage(emp);
+	img_Elect_Rival_2.setImage(emp);
+	img_Elect_Rival_3.setImage(emp);
+	img_Elect_Rival_4.setImage(emp);
+	
+    }
+    
+    
+    /***
+     * 対戦結果をラジオボタンから取得する
+     * @return 
+     */
+    @FXML
+    protected String getSelected(){
+	String val = null;
+	
+	if(rdb_Result_Win.isSelected()){
+	    val = "win";
+	}else if(rdb_Result_Lose.isSelected()){
+	    val = "lose";
+	}else{
+	    val = "cut";
+	}
+	
+	return val;
     }
 
+    /***
+     * ラブリーマイエンジェルあやせたん
+     */
     @FXML
-    public void Ayase(ActionEvent event){
+    protected void Ayase(ActionEvent event){
         
-           /**
-            * ayase
-            */
            LovelyMyAngelAyase ayase = new LovelyMyAngelAyase();
            ayase.HayamiSaori();
         
     }
     
+    /***
+     * 対戦種別変更(シングルへ)
+     * @param event 
+     */
     @FXML
-    public void SelectedToSingleBattle(ActionEvent event){
+    protected void SelectedToSingleBattle(ActionEvent event){
 
             txb_Elect_Own_4.setDisable(true);
             txb_Elect_Rival_4.setDisable(true);
@@ -168,9 +250,13 @@ public class FXEryctonController implements Initializable {
             RoofBean.setBattleType("single");
         
     }
-    
+
+    /***
+     * 対戦種別変更(ダブルへ)
+     * @param event 
+     */
     @FXML
-    public void SelectedToDoubleBattle(ActionEvent event){
+    protected void SelectedToDoubleBattle(ActionEvent event){
 
             txb_Elect_Own_4.setDisable(false);
             txb_Elect_Rival_4.setDisable(false);
@@ -179,51 +265,114 @@ public class FXEryctonController implements Initializable {
 
     }
     
+    /***
+     * デバッグ用文字入力イベント
+     */
     @FXML
-    public void FormClear(ActionEvent event){
-        
-        /**
-         *  画面初期化処理書きたい。
-         */
-        
+    protected void ounoun (ActionEvent event){
+        txb_Own_1.setText("ヒトカゲ");
+        txb_Own_2.setText("リザード");
+        txb_Own_3.setText("リザードン");
+        txb_Own_4.setText("フシギダネ");
+        txb_Own_5.setText("フシギソウ");
+        txb_Own_6.setText("フシギバナ");
+        txb_Rival_1.setText("ゼニガメ");
+        txb_Rival_2.setText("カメール");
+        txb_Rival_3.setText("カメックス");
+        txb_Rival_4.setText("チコリータ");
+        txb_Rival_5.setText("ベイリーフ");
+        txb_Rival_6.setText("メガニウム");
+        txb_Elect_Own_1.setText("ヒノアラシ");
+        txb_Elect_Own_2.setText("マグマラシ");
+        txb_Elect_Own_3.setText("バクフーン");
+        txb_Elect_Own_4.setText("グラードン");
+        txb_Elect_Rival_1.setText("ワニノコ");
+        txb_Elect_Rival_2.setText("アリゲイツ");
+        txb_Elect_Rival_3.setText("オーダイル");
+        txb_Elect_Rival_4.setText("カイオーガ");
+        txb_Rival_Name.setText("我那覇響");
+        txb_Rival_RateRecord.setText("1000");
     }
     
     /***
-     * テスト用文字入力イベント
+     * 画面アイコン再取得
+     * @param event
+     * @throws MalformedURLException 
      */
     @FXML
-    public void ounoun (ActionEvent event){
-        txb_Own_1.setText("Own_1");
-	txb_Own_2.setText("Own_2");
-	txb_Own_3.setText("Own_3");
-	txb_Own_4.setText("Own_4");
-	txb_Own_5.setText("Own_5");
-	txb_Own_6.setText("Own_6");
-	txb_Rival_1.setText("Rival_1");
-	txb_Rival_2.setText("Rival_2");
-	txb_Rival_3.setText("Rival_3");
-	txb_Rival_4.setText("Rival_4");
-	txb_Rival_5.setText("Rival_5");
-	txb_Rival_6.setText("Rival_6");
-	txb_Elect_Own_1.setText("E_Own_1");
-	txb_Elect_Own_2.setText("E_Own_2");
-	txb_Elect_Own_3.setText("E_Own_3");
-	txb_Elect_Own_4.setText("E_Own_4");
-	txb_Elect_Rival_1.setText("E_Rival_1");
-	txb_Elect_Rival_2.setText("E_Rival_2");
-	txb_Elect_Rival_3.setText("E_Rival_3");
-	txb_Elect_Rival_4.setText("E_Rival_4");
-	txb_Rival_Name.setText("RivalName");
-	txb_Rival_RateRecord.setText("rate.");
+    protected void ImageRefresh(ActionEvent event) throws MalformedURLException{
+	
+	String pName = null;
+	ReadContents rc = new ReadContents();
+	String img_Path = null;
+		
+	pName = txb_Own_1.getText();
+	img_Path = rc.GetPath(pName);
+	Image img = new Image((getClass().getResource(img_Path)).toString());	
+	
+	img_Own_1.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Own_2.getText()))).toString());
+	img_Own_2.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Own_3.getText()))).toString());
+	img_Own_3.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Own_4.getText()))).toString());
+	img_Own_4.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Own_5.getText()))).toString());
+	img_Own_5.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Own_6.getText()))).toString());
+	img_Own_6.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_1.getText()))).toString());
+	img_Rival_1.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_2.getText()))).toString());
+	img_Rival_2.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_3.getText()))).toString());
+	img_Rival_3.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_4.getText()))).toString());
+	img_Rival_4.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_5.getText()))).toString());
+	img_Rival_5.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_6.getText()))).toString());
+	img_Rival_6.setImage(img);
+
+	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_1.getText()))).toString());
+	img_Elect_Own_1.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_2.getText()))).toString());
+	img_Elect_Own_2.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_3.getText()))).toString());
+	img_Elect_Own_3.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_4.getText()))).toString());
+	img_Elect_Own_4.setImage(img);
+
+	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_1.getText()))).toString());
+	img_Elect_Rival_1.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_2.getText()))).toString());
+	img_Elect_Rival_2.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_3.getText()))).toString());
+	img_Elect_Rival_3.setImage(img);
+	
+	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_4.getText()))).toString());
+	img_Elect_Rival_4.setImage(img);
+
+	
     }
     
-    /***
-     * 
-     */
-    @FXML
-    public void gen(ActionEvent event){
-        GetNumber.ReadXml("a");
-    }
+
     
     /**
      * アプリケーション終了 

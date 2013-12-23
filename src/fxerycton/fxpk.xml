@@ -1,5 +1,9 @@
 <Pokemons>
         <Pokemon>	
+                <Number>0</Number>
+                <Name>Empty</Name>
+	</Pokemon>
+        <Pokemon>	
 		<Number>1</Number>
 		<Name>フシギダネ</Name>
 	</Pokemon>

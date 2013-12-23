@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package fxerycton.Import;
+package fxerycton;
 
 /**
  *
  * @author kiichi
  */
-public class GetImage {
+public class ReadConents {
     
 }

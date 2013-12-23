@@ -11,9 +11,11 @@ package fxerycton.Bean;
  * @author kiichi
  */
 public class RoofBean {
+    private static String ErrMsg;
     private static String battleType;
     private static String rivalName;
     private static String rateRecord;
+    private static String result;
     private static String own_1;
     private static String own_2;
     private static String own_3;
@@ -356,5 +358,33 @@ public class RoofBean {
     public static void setBattleType(String abattleType) {
         battleType = abattleType;
     
+    }
+
+    /**
+     * @return the result
+     */
+    public static String getResult() {
+	return result;
+    }
+
+    /**
+     * @param aResult the result to set
+     */
+    public static void setResult(String aResult) {
+	result = aResult;
+    }
+
+    /**
+     * @return the ErrMsg
+     */
+    public static String getErrMsg() {
+	return ErrMsg;
+    }
+
+    /**
+     * @param aErrMsg the ErrMsg to set
+     */
+    public static void setErrMsg(String aErrMsg) {
+	ErrMsg = aErrMsg;
     }
 }
