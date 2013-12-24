@@ -2877,234 +2877,98 @@
 	</Pokemon>
 	<Pokemon>
 		<Number>719</Number>
-		<Name>デオキシス攻</Name>
+		<Name>デオキシスA</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>720</Number>
-		<Name>デオキシス守</Name>
+		<Name>デオキシスD</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>721</Number>
-		<Name>デオキシス速</Name>
+		<Name>デオキシスS</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>722</Number>
-		<Name>ミノマダム地</Name>
+		<Name>ミノマダムG</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>723</Number>
-		<Name>ミノマダム鋼</Name>
+		<Name>ミノマダムS</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>724</Number>
-		<Name>シェイミ空</Name>
+		<Name>シェイミS</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>725</Number>
-		<Name>ギラティナ元</Name>
+		<Name>ギラティナA</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>726</Number>
-		<Name>ロトム熱</Name>
+		<Name>ロトムH</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>727</Number>
-		<Name>ロトム洗</Name>
+		<Name>ロトムW</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>728</Number>
-		<Name>ロトム冷</Name>
+		<Name>ロトムF</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>729</Number>
-		<Name>ロトム風</Name>
+		<Name>ロトムS</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>730</Number>
-		<Name>ロトム刈</Name>
+		<Name>ロトムC</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>731</Number>
-		<Name>ポワルン晴</Name>
+		<Name>ポワルンS</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>732</Number>
-		<Name>ポワルン雨</Name>
+		<Name>ポワルンR</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>733</Number>
-		<Name>ポワルン霰</Name>
+		<Name>ポワルンH</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>734</Number>
-		<Name>ヒヒダルマ達磨</Name>
+		<Name>ヒヒダルマD</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>735</Number>
-		<Name>メロエッタ闘</Name>
+		<Name>メロエッタF</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>736</Number>
-		<Name>キュレム白</Name>
+		<Name>キュレムW</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>737</Number>
-		<Name>キュレム黒</Name>
+		<Name>キュレムB</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>738</Number>
-		<Name>ケルディオ覚悟</Name>
+		<Name>ケルディオK</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>739</Number>
-		<Name>トルネロス霊獣</Name>
+		<Name>トルネロスR</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>740</Number>
-		<Name>ボルトロス霊獣</Name>
+		<Name>ボルトロスR</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>741</Number>
-		<Name>ランドロス霊獣</Name>
+		<Name>ランドロスR</Name>
 	</Pokemon>
 	<Pokemon>
 		<Number>742</Number>
-		<Name>ギルガルド刃</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>743</Number>
-		<Name>バケッチャ小</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>744</Number>
-		<Name>バケッチャ大</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>745</Number>
-		<Name>バケッチャ特大</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>746</Number>
-		<Name>パンプジン小</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>747</Number>
-		<Name>パンプジン大</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>748</Number>
-		<Name>パンプジン特大</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>749</Number>
-		<Name>メガフシギバナ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>750</Number>
-		<Name>メガリザードンＸ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>751</Number>
-		<Name>メガリザードンＹ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>752</Number>
-		<Name>メガカメックス</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>753</Number>
-		<Name>メガフーディン</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>754</Number>
-		<Name>メガゲンガー</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>755</Number>
-		<Name>メガガルーラ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>756</Number>
-		<Name>メガカイロス</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>757</Number>
-		<Name>メガギャラドス</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>758</Number>
-		<Name>メガプテラ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>759</Number>
-		<Name>メガミュウツーＸ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>760</Number>
-		<Name>メガミュウツーＹ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>761</Number>
-		<Name>メガデンリュウ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>762</Number>
-		<Name>メガハッサム</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>763</Number>
-		<Name>メガヘラクロス</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>764</Number>
-		<Name>メガヘルガー</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>765</Number>
-		<Name>メガバンギラス</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>766</Number>
-		<Name>メガバシャーモ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>767</Number>
-		<Name>メガサーナイト</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>768</Number>
-		<Name>メガクチート</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>769</Number>
-		<Name>メガボスゴドラ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>770</Number>
-		<Name>メガチャーレム</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>771</Number>
-		<Name>メガライボルト</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>772</Number>
-		<Name>メガジュペッタ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>773</Number>
-		<Name>メガアブソル</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>774</Number>
-		<Name>メガガブリアス</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>775</Number>
-		<Name>メガルカリオ</Name>
-	</Pokemon>
-	<Pokemon>
-		<Number>776</Number>
-		<Name>メガユキノオー</Name>
+		<Name>ギルガルドS</Name>
 	</Pokemon>
 </Pokemons>

@@ -6,7 +6,6 @@
 
 package fxerycton;
 
-
 import fxerycton.AppUtil.LovelyMyAngelAyase;
 import fxerycton.AppUtil.Utility;
 import fxerycton.Bean.RoofBean;
@@ -23,6 +22,9 @@ import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 
 /**
  * @author kiichi
@@ -44,6 +46,8 @@ public class FXEryctonController implements Initializable {
     @FXML RadioMenuItem rmi_Double;
     @FXML Menu men_Help;
     @FXML MenuItem mei_VersionInfo;
+    @FXML MenuItem mei_Input;
+    @FXML MenuItem mei_Refresh;
         
     // Label.
     @FXML Label lbl_Own;    
@@ -101,8 +105,6 @@ public class FXEryctonController implements Initializable {
     @FXML ImageView img_Elect_Rival_4;  
    
     // RadioButton.
-    @FXML ToggleGroup result;
-    @FXML Group test;
     @FXML RadioButton rdb_Result_Win;
     @FXML RadioButton rdb_Result_Lose;
     @FXML RadioButton rdb_Result_Cut;
@@ -111,6 +113,9 @@ public class FXEryctonController implements Initializable {
     @FXML Button btn_Enter;
     
     RoofBean rb = new RoofBean();
+    ReadContents rc = new ReadContents();
+    Image emp = new Image((getClass().getResource(rc.GetPath("Empty"))).toString());
+
     
     /***
      * 登録処理
@@ -118,19 +123,14 @@ public class FXEryctonController implements Initializable {
      */
     @FXML
     public void OnEntered(ActionEvent event){
-        
         Utility utl = new Utility();
         ExportResult er = new ExportResult();
-	
 	// 画面項目をRoofBeanに投げる
 	ThrowResult();
-	
 	//画面項目リセット
 	ResetForm();
-	
 	// 出力
 	er.ResultExport(rb);
-        
     }
     
     /***
@@ -186,9 +186,7 @@ public class FXEryctonController implements Initializable {
 	txb_Elect_Rival_4.setText("");
 	txb_Rival_Name.setText("");
 	txb_Rival_RateRecord.setText("");
-	
-	ReadContents rc = new ReadContents();
-	Image emp = new Image((getClass().getResource(rc.GetPath("Empty"))).toString());
+		
 	img_Rival_1.setImage(emp);
 	img_Rival_2.setImage(emp);
 	img_Rival_3.setImage(emp);
@@ -203,7 +201,6 @@ public class FXEryctonController implements Initializable {
 	img_Elect_Rival_2.setImage(emp);
 	img_Elect_Rival_3.setImage(emp);
 	img_Elect_Rival_4.setImage(emp);
-	
     }
     
     
@@ -214,7 +211,6 @@ public class FXEryctonController implements Initializable {
     @FXML
     protected String getSelected(){
 	String val = null;
-	
 	if(rdb_Result_Win.isSelected()){
 	    val = "win";
 	}else if(rdb_Result_Lose.isSelected()){
@@ -222,7 +218,6 @@ public class FXEryctonController implements Initializable {
 	}else{
 	    val = "cut";
 	}
-	
 	return val;
     }
 
@@ -231,10 +226,8 @@ public class FXEryctonController implements Initializable {
      */
     @FXML
     protected void Ayase(ActionEvent event){
-        
            LovelyMyAngelAyase ayase = new LovelyMyAngelAyase();
            ayase.HayamiSaori();
-        
     }
     
     /***
@@ -243,12 +236,13 @@ public class FXEryctonController implements Initializable {
      */
     @FXML
     protected void SelectedToSingleBattle(ActionEvent event){
-
             txb_Elect_Own_4.setDisable(true);
             txb_Elect_Rival_4.setDisable(true);
-            
             RoofBean.setBattleType("single");
-        
+	    txb_Elect_Own_4.setText("");
+	    txb_Elect_Rival_4.setText("");
+	    img_Elect_Own_4.setImage(emp);
+	    img_Elect_Rival_4.setImage(emp);
     }
 
     /***
@@ -257,12 +251,9 @@ public class FXEryctonController implements Initializable {
      */
     @FXML
     protected void SelectedToDoubleBattle(ActionEvent event){
-
             txb_Elect_Own_4.setDisable(false);
             txb_Elect_Rival_4.setDisable(false);
-            
             RoofBean.setBattleType("double");
-
     }
     
     /***
@@ -301,9 +292,7 @@ public class FXEryctonController implements Initializable {
      */
     @FXML
     protected void ImageRefresh(ActionEvent event) throws MalformedURLException{
-	
 	String pName = null;
-	ReadContents rc = new ReadContents();
 	String img_Path = null;
 		
 	pName = txb_Own_1.getText();
@@ -311,82 +300,69 @@ public class FXEryctonController implements Initializable {
 	Image img = new Image((getClass().getResource(img_Path)).toString());	
 	
 	img_Own_1.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Own_2.getText()))).toString());
 	img_Own_2.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Own_3.getText()))).toString());
 	img_Own_3.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Own_4.getText()))).toString());
 	img_Own_4.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Own_5.getText()))).toString());
 	img_Own_5.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Own_6.getText()))).toString());
 	img_Own_6.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_1.getText()))).toString());
 	img_Rival_1.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_2.getText()))).toString());
 	img_Rival_2.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_3.getText()))).toString());
 	img_Rival_3.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_4.getText()))).toString());
 	img_Rival_4.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_5.getText()))).toString());
 	img_Rival_5.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_6.getText()))).toString());
 	img_Rival_6.setImage(img);
-
 	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_1.getText()))).toString());
 	img_Elect_Own_1.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_2.getText()))).toString());
 	img_Elect_Own_2.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_3.getText()))).toString());
 	img_Elect_Own_3.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_4.getText()))).toString());
 	img_Elect_Own_4.setImage(img);
-
 	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_1.getText()))).toString());
 	img_Elect_Rival_1.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_2.getText()))).toString());
 	img_Elect_Rival_2.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_3.getText()))).toString());
 	img_Elect_Rival_3.setImage(img);
-	
 	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_4.getText()))).toString());
 	img_Elect_Rival_4.setImage(img);
-
-	
     }
-    
-
     
     /**
      * アプリケーション終了 
      */
     @FXML
-    public void FormExit(ActionEvent event){
-        
+    public void FormExit(ActionEvent event){    
         Platform.exit();
-        
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+	/***
+	 * キーボードショートカット
+	 */	    
+	// アイコン一括更新(Alt + F)
+        this.mei_Refresh.setAccelerator(new KeyCodeCombination(KeyCode.F,KeyCombination.ALT_DOWN,KeyCombination.SHORTCUT_ANY));
+	// デバッグ用文字入力(Alt + I)
+        this.mei_Input.setAccelerator(new KeyCodeCombination(KeyCode.I,KeyCombination.ALT_DOWN,KeyCombination.SHORTCUT_ANY));
+	// 対戦種別変更, シングル(Alt + S)
+        this.rmi_Single.setAccelerator(new KeyCodeCombination(KeyCode.S,KeyCombination.ALT_DOWN,KeyCombination.SHORTCUT_ANY));
+	// 対戦種別変更, ダブル(Alt + D)
+        this.rmi_Double.setAccelerator(new KeyCodeCombination(KeyCode.D,KeyCombination.ALT_DOWN,KeyCombination.SHORTCUT_ANY));
+	// 新垣あやせ(Alt + A)
+        this.mei_Ayase.setAccelerator(new KeyCodeCombination(KeyCode.A,KeyCombination.ALT_DOWN,KeyCombination.SHORTCUT_ANY));	
+	
     }    
-    
 }

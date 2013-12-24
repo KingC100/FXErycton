@@ -231,8 +231,8 @@
         <Menu mnemonicParsing="false" text="ヘルプ" fx:id="men_Help">
           <items>
             <MenuItem mnemonicParsing="false" text="バージョン情報" fx:id="mei_VersionInfo" />
-            <MenuItem mnemonicParsing="false" onAction="#ounoun" text="inputtext" />
-            <MenuItem mnemonicParsing="false" onAction="#ImageRefresh" text="imgrefresh" />
+            <MenuItem mnemonicParsing="false" onAction="#ounoun" text="inputtext" fx:id="mei_Input" />
+            <MenuItem mnemonicParsing="false" onAction="#ImageRefresh" text="imgrefresh" fx:id="mei_Refresh" />
           </items>
         </Menu>
       </menus>

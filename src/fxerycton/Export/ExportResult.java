@@ -20,6 +20,11 @@ import fxerycton.Bean.RoofBean;
  */
 public class ExportResult {
     
+    /***
+     * result.txt出力処理
+     * @param rb
+     * @return 
+     */
     public boolean ResultExport(RoofBean rb) {
         
         try{
@@ -31,7 +36,6 @@ public class ExportResult {
                     └─single
             */
             
-
             String export_Path = "." + Const.fs + "export" + Const.fs;
             String[] ymd = utl.getDate();
             String fileName = "result.txt";
@@ -50,7 +54,6 @@ public class ExportResult {
                 file.createNewFile();
                 osw.write(Create_Sentence());
             }
-        
             return true;
         }catch(IOException e){
             return false;
@@ -125,11 +128,11 @@ public class ExportResult {
 		sb.append( kaigyo );
 		sb.append("相手１：").append(RoofBean.getElect_rival_1());
 		sb.append( kaigyo );
-		sb.append("相手１：").append(RoofBean.getElect_rival_2());
+		sb.append("相手２：").append(RoofBean.getElect_rival_2());
 		sb.append( kaigyo );
-		sb.append("相手１：").append(RoofBean.getElect_rival_3());
+		sb.append("相手３：").append(RoofBean.getElect_rival_3());
 		sb.append( kaigyo );
-		sb.append("相手１：").append(RoofBean.getElect_rival_4());
+		sb.append("相手４：").append(RoofBean.getElect_rival_4());
 		sb.append( kaigyo );
 				
 		sb.append("------------------------------------------");

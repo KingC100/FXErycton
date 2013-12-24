@@ -11,6 +11,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -26,7 +27,9 @@ public class FXErycton extends Application {
         
         Scene scene = new Scene(root);
         
-        stage.setTitle("FXErcycton v1.0.0");
+        stage.setTitle("FXErcycton v0.0.1");
+	stage.setResizable(false);
+//	stage.getIcons().add(new Image("201-f.png"));
         
         stage.setScene(scene);
         stage.show();

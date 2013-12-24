@@ -6,7 +6,6 @@
 
 package fxerycton.Import;
 
-import fxerycton.Bean.RoofBean;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -37,7 +36,7 @@ public class ReadContents {
 	
 	String xName = ReadXml(pName);
 	
-    	String icon_Path = "/Icons/" + xName +  ".png";
+    	String icon_Path = "Icons/" + xName +  ".png";
 	
 	return icon_Path; 
     }
@@ -58,7 +57,7 @@ public class ReadContents {
                 builder = dbfactory.newDocumentBuilder();
 
                 Document doc = builder.parse(
-                            new FileInputStream("C:\\Users\\kiichi\\Documents\\NetBeansProjects\\FXErycton\\src\\fxerycton\\fxpk.xml"));
+                            new FileInputStream(".\\src\\fxerycton\\fxpk.xml"));
                 Element root = doc.getDocumentElement();
                 
                 /**
@@ -83,13 +82,16 @@ public class ReadContents {
 //                    System.out.println("Number:\"" + number.getTextContent() + "\"");
 		    
 		    if (pName.equals(name.getTextContent())){
-			pNumber = number.getTextContent();
+			pNumber =  number.getTextContent();
 //			System.out.println("Match To :\"" + pName + "\"");
 //			System.out.println("Match To :\"" + pName + "\"");
-			break;
+			return pNumber;
 		    }
 		    
                 }
+		
+		// 見つからない場合は"?"の表示
+		pNumber = "0";
 
             } catch (ParserConfigurationException | SAXException | IOException ex) {
                 Logger.getLogger(ReadContents.class.getName()).log(Level.SEVERE, null, ex);
