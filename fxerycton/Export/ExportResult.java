@@ -11,7 +11,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import fxerycton.AppUtil.Utility;
-import fxercton.AppUtil.Const;
 import fxerycton.Bean.RoofBean;
 
 /**
@@ -40,7 +39,7 @@ public class ExportResult {
             String[] ymd = utl.getDate();
             String fileName = "result.txt";
             String battle_Type = RoofBean.getBattleType();
-            File dir = new File(export_Path + ymd[0] + ymd[1] + ymd[2] + Const.fs + battle_Type + Const.fs);
+            File dir = new File(export_Path + ymd[0] + ymd[1] + ymd[2] + "/" + battle_Type + "/");
             File file = new File(dir + "/" + fileName);
             
             if (!(dir.exists())){

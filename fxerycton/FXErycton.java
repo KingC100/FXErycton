@@ -7,7 +7,6 @@
 package fxerycton;
 
 import fxerycton.Bean.RoofBean;
-import fxercton.AppUtil.Const;
 import fxerycton.Import.ReadContents;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

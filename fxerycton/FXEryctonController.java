@@ -11,13 +11,8 @@ import fxerycton.AppUtil.LovelyMyAngelAyase;
 import fxerycton.Bean.RoofBean;
 import fxerycton.Export.ExportResult;
 import fxerycton.Import.ReadContents;
-import java.awt.Desktop;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -51,8 +46,6 @@ public class FXEryctonController implements Initializable {
     @FXML RadioMenuItem rmi_Double;
     @FXML Menu men_Help;
     @FXML MenuItem mei_VersionInfo;
-    @FXML MenuItem mei_Input;
-    @FXML MenuItem mei_Refresh;
         
     // Label.
     @FXML Label lbl_Own;    
@@ -121,8 +114,10 @@ public class FXEryctonController implements Initializable {
     ReadContents rc = new ReadContents();
     ExportResult er = new ExportResult();
 
-    Image emp = new Image((getClass().getResource(rc.GetPath("Empty"))).toString());
-
+    public Image GetEmptyImage(){
+        Image emp = new Image((getClass().getResource(rc.GetPath("Empty"))).toString());
+	return emp;
+    }
     
     /***
      * 登録処理
@@ -192,20 +187,20 @@ public class FXEryctonController implements Initializable {
 	txb_Rival_Name.setText("");
 	txb_Rival_RateRecord.setText("");
 		
-	img_Rival_1.setImage(emp);
-	img_Rival_2.setImage(emp);
-	img_Rival_3.setImage(emp);
-	img_Rival_4.setImage(emp);
-	img_Rival_5.setImage(emp);
-	img_Rival_6.setImage(emp);
-	img_Elect_Own_1.setImage(emp);
-	img_Elect_Own_2.setImage(emp);
-	img_Elect_Own_3.setImage(emp);
-	img_Elect_Own_4.setImage(emp);
-	img_Elect_Rival_1.setImage(emp);
-	img_Elect_Rival_2.setImage(emp);
-	img_Elect_Rival_3.setImage(emp);
-	img_Elect_Rival_4.setImage(emp);
+	img_Rival_1.setImage(GetEmptyImage());
+	img_Rival_2.setImage(GetEmptyImage());
+	img_Rival_3.setImage(GetEmptyImage());
+	img_Rival_4.setImage(GetEmptyImage());
+	img_Rival_5.setImage(GetEmptyImage());
+	img_Rival_6.setImage(GetEmptyImage());
+	img_Elect_Own_1.setImage(GetEmptyImage());
+	img_Elect_Own_2.setImage(GetEmptyImage());
+	img_Elect_Own_3.setImage(GetEmptyImage());
+	img_Elect_Own_4.setImage(GetEmptyImage());
+	img_Elect_Rival_1.setImage(GetEmptyImage());
+	img_Elect_Rival_2.setImage(GetEmptyImage());
+	img_Elect_Rival_3.setImage(GetEmptyImage());
+	img_Elect_Rival_4.setImage(GetEmptyImage());
     }
     
     
@@ -246,10 +241,13 @@ public class FXEryctonController implements Initializable {
             RoofBean.setBattleType("single");
 	    txb_Elect_Own_4.setText("");
 	    txb_Elect_Rival_4.setText("");
-	    img_Elect_Own_4.setImage(emp);
-	    img_Elect_Rival_4.setImage(emp);
+	    img_Elect_Own_4.setImage(GetEmptyImage());
+	    img_Elect_Rival_4.setImage(GetEmptyImage());
     }
     
+    /***
+     * バージョン情報
+     */
     @FXML
     protected void VersionInfo(ActionEvent event){
 	GoInfo gi = new GoInfo();
@@ -295,57 +293,6 @@ public class FXEryctonController implements Initializable {
         txb_Rival_Name.setText("我那覇響");
         txb_Rival_RateRecord.setText("1000");
     }
-    
-    /***
-     * 画面アイコン再取得
-     * @param event
-     * @throws MalformedURLException 
-     */
-    @FXML
-    protected void ImageRefresh(ActionEvent event) throws MalformedURLException{
-	
-	Image img = new Image((getClass().getResource(rc.GetPath(txb_Own_2.getText()))).toString());
-	img_Own_1.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Own_2.getText()))).toString());
-	img_Own_2.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Own_3.getText()))).toString());
-	img_Own_3.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Own_4.getText()))).toString());
-	img_Own_4.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Own_5.getText()))).toString());
-	img_Own_5.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Own_6.getText()))).toString());
-	img_Own_6.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_1.getText()))).toString());
-	img_Rival_1.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_2.getText()))).toString());
-	img_Rival_2.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_3.getText()))).toString());
-	img_Rival_3.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_4.getText()))).toString());
-	img_Rival_4.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_5.getText()))).toString());
-	img_Rival_5.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Rival_6.getText()))).toString());
-	img_Rival_6.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_1.getText()))).toString());
-	img_Elect_Own_1.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_2.getText()))).toString());
-	img_Elect_Own_2.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_3.getText()))).toString());
-	img_Elect_Own_3.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Own_4.getText()))).toString());
-	img_Elect_Own_4.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_1.getText()))).toString());
-	img_Elect_Rival_1.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_2.getText()))).toString());
-	img_Elect_Rival_2.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_3.getText()))).toString());
-	img_Elect_Rival_3.setImage(img);
-	img = new Image((getClass().getResource(rc.GetPath(txb_Elect_Rival_4.getText()))).toString());
-	img_Elect_Rival_4.setImage(img);
-    }
-    
     /**
      * アプリケーション終了 
      */
@@ -508,10 +455,6 @@ public class FXEryctonController implements Initializable {
 	/***
 	 * キーボードショートカット
 	 */	    
-	// アイコン一括更新(Alt + F)
-        this.mei_Refresh.setAccelerator(new KeyCodeCombination(KeyCode.F,KeyCombination.ALT_DOWN,KeyCombination.SHORTCUT_ANY));
-	// デバッグ用文字入力(Alt + I)
-        this.mei_Input.setAccelerator(new KeyCodeCombination(KeyCode.I,KeyCombination.ALT_DOWN,KeyCombination.SHORTCUT_ANY));
 	// 対戦種別変更, シングル(Alt + S)
         this.rmi_Single.setAccelerator(new KeyCodeCombination(KeyCode.S,KeyCombination.ALT_DOWN,KeyCombination.SHORTCUT_ANY));
 	// 対戦種別変更, ダブル(Alt + D)

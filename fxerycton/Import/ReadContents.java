@@ -37,7 +37,6 @@ public class ReadContents {
 	String xName = ReadXml(pName);
 	//アイコンのパスをセット.
     	String icon_Path = "icons/" + xName +  ".png";
-	
 	return icon_Path; 
     }
     
@@ -55,7 +54,8 @@ public class ReadContents {
                 DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
                 builder = dbfactory.newDocumentBuilder();
                 Document doc = builder.parse(
-                            new FileInputStream("./src/fxerycton/fxpk.xml"));
+//                            new FileInputStream("./src/fxerycton/fxpk.xml"));
+                            new FileInputStream("fxpk.xml"));
                 Element root = doc.getDocumentElement();
                 
                 /**
