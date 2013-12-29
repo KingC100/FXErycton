@@ -6,7 +6,5 @@ FXErycton
 
 ポケモン対戦記録ツール(第六世代対応版)
 
-使い方 : 
-http://veekun.com/dex/downloads のOthers -> Pokémon icons (255KB)をDL、
-解凍したpokemon/の"icons"フォルダをFXErycton\に配置後、EditIcons.batを実行、
-FXErycton.jarをダブルクリックで起動です。
+アイコン周りの関係で個人用です。。。
+ビルド時にfxerycton/icons/0.png ~ が存在しないと起動しません。
