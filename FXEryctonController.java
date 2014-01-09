@@ -78,7 +78,6 @@ public class FXEryctonController implements Initializable {
     @FXML TextField txb_Elect_Rival_3;
     @FXML TextField txb_Elect_Rival_4;
     @FXML TextField txb_Rival_Name;
-    @FXML TextField txb_Rival_RateRecord;
     
     // ImageView.
     @FXML ImageView img_Own_1;
@@ -110,9 +109,15 @@ public class FXEryctonController implements Initializable {
     // Button.
     @FXML Button btn_Enter;
     
-    RoofBean rb = new RoofBean();
-    ReadContents rc = new ReadContents();
-    ExportResult er = new ExportResult();
+    RoofBean rb;
+    ReadContents rc;
+    ExportResult er;
+
+    public FXEryctonController() {
+	this.er = new ExportResult();
+	this.rc = new ReadContents();
+	this.rb = new RoofBean();
+    }
 
     public Image GetEmptyImage(){
         Image emp = new Image(rc.GetPath("Empty"));
@@ -158,7 +163,6 @@ public class FXEryctonController implements Initializable {
         RoofBean.setElect_rival_2(txb_Elect_Rival_2.getText());
         RoofBean.setElect_rival_3(txb_Elect_Rival_3.getText());
         RoofBean.setElect_rival_4(txb_Elect_Rival_4.getText());
-        RoofBean.setRateRecord(txb_Rival_RateRecord.getText());
         RoofBean.setRivalName(txb_Rival_Name.getText());
         RoofBean.setResult(getSelected());
     }
@@ -185,7 +189,6 @@ public class FXEryctonController implements Initializable {
 	txb_Elect_Rival_3.setText("");
 	txb_Elect_Rival_4.setText("");
 	txb_Rival_Name.setText("");
-	txb_Rival_RateRecord.setText("");
 		
 	img_Rival_1.setImage(GetEmptyImage());
 	img_Rival_2.setImage(GetEmptyImage());
@@ -201,7 +204,9 @@ public class FXEryctonController implements Initializable {
 	img_Elect_Rival_2.setImage(GetEmptyImage());
 	img_Elect_Rival_3.setImage(GetEmptyImage());
 	img_Elect_Rival_4.setImage(GetEmptyImage());
-    }
+	
+	txb_Rival_1.requestFocus();
+	}
     
     
     /***
@@ -291,7 +296,6 @@ public class FXEryctonController implements Initializable {
         txb_Elect_Rival_3.setText("オーダイル");
         txb_Elect_Rival_4.setText("カイオーガ");
         txb_Rival_Name.setText("我那覇響");
-        txb_Rival_RateRecord.setText("1000");
     }
     /**
      * アプリケーション終了 

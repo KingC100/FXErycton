@@ -100,7 +100,6 @@
           </children>
         </AnchorPane>
         <TextField fx:id="txb_Rival_Name" layoutX="101.0" layoutY="314.0" prefWidth="86.0" />
-        <TextField fx:id="txb_Rival_RateRecord" layoutX="141.0" layoutY="341.0" prefWidth="46.0" />
         <RadioButton fx:id="rdb_Result_Win" font="$x2" layoutX="229.0" layoutY="301.0" mnemonicParsing="false" selected="true" text="Win">
           <toggleGroup>
             <ToggleGroup fx:id="x3" />
@@ -110,7 +109,6 @@
         <RadioButton fx:id="rdb_Result_Cut" font="$x2" layoutX="229.0" layoutY="355.0" mnemonicParsing="false" text="Cut" toggleGroup="$x3" />
         <Button id="FXEryctonController" fx:id="btn_Enter" font="$x2" layoutX="464.0" layoutY="345.0" mnemonicParsing="false" onAction="#OnEntered" prefHeight="31.0" prefWidth="87.0" text="Enter" />
         <Label fx:id="lbl_Rival_Name" font="$x2" layoutX="14.0" layoutY="317.0" text="RivalName :" />
-        <Label fx:id="lbl_RateRecord" font="$x2" layoutX="14.0" layoutY="344.0" text="Rate /  Record :" />
         <Label fx:id="lbl_Rival" font="$x2" layoutX="22.0" layoutY="169.0" text="Rival :" />
         <Label fx:id="lbl_Own" font="$x2" layoutX="24.0" layoutY="17.0" text="Own :" />
       </children>

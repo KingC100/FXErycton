@@ -10,6 +10,7 @@ package fxerycton.Bean;
  *
  * @author kiichi
  */
+
 public class RoofBean {
     private static String ErrMsg;
     private static String battleType;
