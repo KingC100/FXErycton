@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package fxerycton.AppUtil;
 
 import java.text.SimpleDateFormat;
@@ -21,18 +15,12 @@ public class Utility {
      */
     public boolean isNull(String str) {
 	boolean bl = false;
-	if (str.equals("null") || str.equals("") || str.equals(" ")){
-		bl = false;
-	} else {
-		bl = true;
-	}
-	
+        bl = !(str.equals("null") || str.equals("") || str.equals(" "));
 	return bl;
 }
     
     /***
     * 日付の項目を取得
-    * @param str[] - 取得する項目名
     * @return  res - 日時等
     */
     public String[] getDate(){
@@ -42,7 +30,7 @@ public class Utility {
     // 年/月/日/時/分/秒/曜日のフォーマット作成.
     SimpleDateFormat sdf_now = new SimpleDateFormat("yyyy/MM/dd/HH/mm/ss");
     // Date → フォーマットに嵌める → toString() → "/"でsplitして格納. 
-    String[] str_now = ((sdf_now.format(now)).toString().split("/"));
+    String[] str_now = ((sdf_now.format(now)).split("/"));
     
     return str_now;
     }

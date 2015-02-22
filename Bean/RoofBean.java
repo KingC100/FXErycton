@@ -10,7 +10,6 @@ package fxerycton.Bean;
  *
  * @author kiichi
  */
-
 public class RoofBean {
     private static String ErrMsg;
     private static String battleType;
@@ -354,7 +353,7 @@ public class RoofBean {
     }
 
     /**
-     * @param battleType the battleType to set
+     * @param abattleType
      */
     public static void setBattleType(String abattleType) {
         battleType = abattleType;

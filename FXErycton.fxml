@@ -11,9 +11,9 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-background-color 0xffb199ff?>
 
-<AnchorPane id="" prefHeight="432.0000999999975" prefWidth="581.0" style="" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxerycton.FXEryctonController">
+<AnchorPane id="" prefHeight="432.0" prefWidth="566.0" style="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxerycton.FXEryctonController">
   <children>
-    <AnchorPane id="" layoutX="14.0" layoutY="30.0" mouseTransparent="false" prefHeight="138.0" prefWidth="325.0">
+    <AnchorPane id="" layoutX="14.0" layoutY="30.0" mouseTransparent="false" prefHeight="390.0" prefWidth="539.0">
       <children>
         <Line endX="450.0" fill="BLACK" layoutX="100.0" layoutY="136.0" startX="-100.0" strokeWidth="1.5">
           <stroke>
@@ -21,7 +21,7 @@
           </stroke>
         </Line>
         <Line endX="0.0" endY="500.0" layoutX="315.0" layoutY="-111.0" startX="0.0" startY="110.0" stroke="$x1" />
-        <AnchorPane layoutX="15.0" layoutY="25.0" prefHeight="83.99990844726562" prefWidth="179.0">
+        <AnchorPane layoutX="15.0" layoutY="25.0" prefHeight="84.0" prefWidth="179.0">
           <children>
             <TextField id="txb_Own_2" fx:id="txb_Own_1" layoutX="7.0" layoutY="12.0" prefWidth="86.0" />
             <TextField fx:id="txb_Own_2" layoutX="93.0" layoutY="12.0" prefWidth="86.0" />
@@ -31,7 +31,7 @@
             <TextField fx:id="txb_Own_6" layoutX="93.0" layoutY="52.0" prefWidth="86.0" />
           </children>
         </AnchorPane>
-        <AnchorPane disable="false" layoutX="205.0" layoutY="6.0" minHeight="112.0" prefHeight="128.00009999999747" prefWidth="93.0">
+        <AnchorPane disable="false" layoutX="205.0" layoutY="6.0" minHeight="112.0" prefHeight="128.0" prefWidth="93.0">
           <children>
             <ImageView fx:id="img_Own_1" fitHeight="39.0" fitWidth="39.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="img_Own_2" fitHeight="39.0" fitWidth="39.0" layoutX="47.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
@@ -46,7 +46,7 @@
             <Font name="Meiryo UI Bold" size="12.0" fx:id="x2" />
           </font>
         </Label>
-        <AnchorPane layoutX="14.0" layoutY="176.0" prefHeight="83.99990844726562" prefWidth="179.0">
+        <AnchorPane layoutX="14.0" layoutY="176.0" prefHeight="84.0" prefWidth="179.0">
           <children>
             <TextField fx:id="txb_Rival_1" layoutX="7.0" layoutY="12.0" prefWidth="86.0" />
             <TextField fx:id="txb_Rival_2" layoutX="93.0" layoutY="12.0" prefWidth="86.0" />
@@ -66,7 +66,7 @@
             <ImageView fx:id="img_Rival_6" fitHeight="39.0" fitWidth="39.0" layoutX="45.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" />
           </children>
         </AnchorPane>
-        <AnchorPane id="img_Elect_Own_4" disable="false" layoutX="329.0" layoutY="25.0" minHeight="84.0" prefHeight="100.00009999999747" prefWidth="94.0">
+        <AnchorPane id="img_Elect_Own_4" disable="false" layoutX="329.0" layoutY="25.0" minHeight="84.0" prefHeight="100.0" prefWidth="94.0">
           <children>
             <TextField id="Friend_1" fx:id="txb_Elect_Own_1" layoutX="4.0" layoutY="6.0" prefWidth="86.0" />
             <TextField fx:id="txb_Elect_Own_2" layoutX="4.0" layoutY="26.0" prefWidth="86.0" />
@@ -74,7 +74,7 @@
             <TextField fx:id="txb_Elect_Own_4" disable="true" layoutX="4.0" layoutY="66.0" prefWidth="86.0" />
           </children>
         </AnchorPane>
-        <AnchorPane disable="false" layoutX="430.0" layoutY="33.0" minHeight="84.0" prefHeight="90.99990000000253" prefWidth="93.0">
+        <AnchorPane disable="false" layoutX="430.0" layoutY="33.0" minHeight="84.0" prefHeight="91.0" prefWidth="93.0">
           <children>
             <ImageView fx:id="img_Elect_Own_1" fitHeight="39.0" fitWidth="39.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="img_Elect_Own_2" fitHeight="39.0" fitWidth="39.0" layoutX="45.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
@@ -91,7 +91,7 @@
             <TextField fx:id="txb_Elect_Rival_4" disable="true" layoutX="4.0" layoutY="66.0" prefWidth="86.0" />
           </children>
         </AnchorPane>
-        <AnchorPane disable="false" layoutX="430.0" layoutY="181.0" minHeight="84.0" prefHeight="90.99990000000253" prefWidth="93.0">
+        <AnchorPane disable="false" layoutX="430.0" layoutY="181.0" minHeight="84.0" prefHeight="91.0" prefWidth="93.0">
           <children>
             <ImageView fx:id="img_Elect_Rival_1" fitHeight="39.0" fitWidth="39.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="img_Elect_Rival_2" fitHeight="39.0" fitWidth="39.0" layoutX="47.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
@@ -100,6 +100,7 @@
           </children>
         </AnchorPane>
         <TextField fx:id="txb_Rival_Name" layoutX="101.0" layoutY="314.0" prefWidth="86.0" />
+        <TextField fx:id="txb_Rival_RateRecord" layoutX="141.0" layoutY="341.0" prefWidth="46.0" />
         <RadioButton fx:id="rdb_Result_Win" font="$x2" layoutX="229.0" layoutY="301.0" mnemonicParsing="false" selected="true" text="Win">
           <toggleGroup>
             <ToggleGroup fx:id="x3" />
@@ -107,35 +108,36 @@
         </RadioButton>
         <RadioButton fx:id="rdb_Result_Lose" font="$x2" layoutX="229.0" layoutY="329.0" mnemonicParsing="false" text="Lose" toggleGroup="$x3" />
         <RadioButton fx:id="rdb_Result_Cut" font="$x2" layoutX="229.0" layoutY="355.0" mnemonicParsing="false" text="Cut" toggleGroup="$x3" />
-        <Button id="FXEryctonController" fx:id="btn_Enter" font="$x2" layoutX="464.0" layoutY="345.0" mnemonicParsing="false" onAction="#OnEntered" prefHeight="31.0" prefWidth="87.0" text="Enter" />
+        <Button id="FXEryctonController" fx:id="btn_Enter" font="$x2" layoutX="450.0" layoutY="349.0" mnemonicParsing="false" onAction="#OnEntered" prefHeight="31.0" prefWidth="87.0" text="Enter" />
         <Label fx:id="lbl_Rival_Name" font="$x2" layoutX="14.0" layoutY="317.0" text="RivalName :" />
+        <Label fx:id="lbl_RateRecord" font="$x2" layoutX="14.0" layoutY="344.0" text="Rate /  Record :" />
         <Label fx:id="lbl_Rival" font="$x2" layoutX="22.0" layoutY="169.0" text="Rival :" />
         <Label fx:id="lbl_Own" font="$x2" layoutX="24.0" layoutY="17.0" text="Own :" />
       </children>
     </AnchorPane>
-    <MenuBar fx:id="menuBar" disable="false" focusTraversable="false" layoutX="0.0" layoutY="0.0" prefWidth="600.0" useSystemMenuBar="true" visible="true">
+    <MenuBar fx:id="menuBar" disable="false" focusTraversable="false" layoutX="0.0" layoutY="0.0" prefHeight="25.0" prefWidth="584.0" useSystemMenuBar="true" visible="true">
       <menus>
         <Menu mnemonicParsing="false" text="メニュー">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#Ayase" text="新垣あやせ" fx:id="mei_Ayase" />
+            <MenuItem fx:id="mei_Ayase" mnemonicParsing="false" onAction="#Ayase" text="新垣あやせ" />
             <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" onAction="#FormExit" text="終了" fx:id="mei_Exit" />
+            <MenuItem fx:id="mei_Exit" mnemonicParsing="false" onAction="#FormExit" text="終了" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="対戦種別" fx:id="men_BattleType">
+        <Menu fx:id="men_BattleType" mnemonicParsing="false" text="対戦種別">
           <items>
-            <RadioMenuItem mnemonicParsing="false" onAction="#SelectedToSingleBattle" selected="true" text="シングル" fx:id="rmi_Single">
+            <RadioMenuItem fx:id="rmi_Single" mnemonicParsing="false" onAction="#SelectedToSingleBattle" selected="true" text="シングル">
               <toggleGroup>
                 <ToggleGroup fx:id="BattleType" />
               </toggleGroup>
             </RadioMenuItem>
-            <RadioMenuItem mnemonicParsing="false" onAction="#SelectedToDoubleBattle" selected="false" text="ダブル" toggleGroup="$BattleType" fx:id="rmi_Double" />
+            <RadioMenuItem fx:id="rmi_Double" mnemonicParsing="false" onAction="#SelectedToDoubleBattle" selected="false" text="ダブル" toggleGroup="$BattleType" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="ヘルプ" fx:id="men_Help">
+        <Menu fx:id="men_Help" mnemonicParsing="false" text="ヘルプ">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#VersionInfo" text="バージョン情報" fx:id="mei_VersionInfo" />
-            <MenuItem disable="false" mnemonicParsing="false" onAction="#ounoun" text="inputtext" visible="false" fx:id="mei_Input" />
+            <MenuItem fx:id="mei_VersionInfo" mnemonicParsing="false" onAction="#VersionInfo" text="バージョン情報" />
+            <MenuItem fx:id="mei_Input" disable="false" mnemonicParsing="false" onAction="#ounoun" text="inputtext" visible="false" />
           </items>
         </Menu>
       </menus>

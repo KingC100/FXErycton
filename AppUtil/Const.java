@@ -1,4 +1,4 @@
-package fxercton.AppUtil;
+package fxerycton.AppUtil;
 
 import java.io.File;
 
